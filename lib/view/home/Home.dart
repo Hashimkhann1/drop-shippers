@@ -1,6 +1,7 @@
+import 'package:dropshiper/view/onboaring-screen/onboardingScreen.dart';
+import 'package:dropshiper/widgets/drposhipperText.dart';
 import 'package:dropshiper/widgets/screenOneButton.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart'; //google-fonts
 
 
 class Home extends StatefulWidget {
@@ -22,13 +23,7 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
-                    child: Text('Dropshippers',
-                      style:
-                      GoogleFonts.charm(
-                          fontSize: 37.0,
-                        color: Color(0xFF393A3E)
-                      )
-                      ),
+                    child: DropshipperText()
                   ),
                   Image(image: AssetImage('images/screenOneMainIMG.png')),
                   Text('Select Language to continue',
@@ -52,7 +47,9 @@ class _HomeState extends State<Home> {
                           style: TextButton.styleFrom(
                             backgroundColor: Colors.yellow
                           ),
-                            onPressed: (){}, child: Text('CONTINUE WITH'
+                            onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
+                            }, child: Text('CONTINUE WITH'
                         )
                         ),
                       ],
