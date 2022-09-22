@@ -1,3 +1,4 @@
+import 'package:dropshiper/view/auth/sign_in_with_social.dart';
 import 'package:dropshiper/widgets/drposhipperText.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class TermsCondation extends StatefulWidget {
 
 class _TermsCondationState extends State<TermsCondation> {
 
-  late bool? agree = false;
+  late bool? agree = true;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _TermsCondationState extends State<TermsCondation> {
               children: <Widget>[
                 // SizedBox(height: 10,),
                 DropshipperText(),
-                // SizedBox(height: 60.0,),
+                // SizedBox(height: .0,),
                 Image(image: AssetImage('images/termsAndConditionsMainIMG.png'),),
                 Text('STANDARD TERMS OF AGREEMENT',),
                 Padding(
@@ -42,9 +43,7 @@ class _TermsCondationState extends State<TermsCondation> {
                           activeColor: Colors.black,
                           onChanged: (value){
                             setState(() {
-                              print(agree);
                               agree = value;
-                              print(agree);
                             });
                           }),
                     ),
@@ -52,8 +51,8 @@ class _TermsCondationState extends State<TermsCondation> {
                   ],
                 ),
                 GestureDetector(
-                  onTap: (){
-                  //  add any properity
+                  onTap: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignInWithSocial()))
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 100.0, vertical: 16.0),
