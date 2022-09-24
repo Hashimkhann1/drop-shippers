@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-class LoginSigin extends StatelessWidget {
+class ButtonWithImageAndText extends StatelessWidget {
 
-  LoginSigin({this.title, this.ImageName, this.onTap});
+  ButtonWithImageAndText({this.title, this.ImageName, this.onTap});
 
   String? title;
   String? ImageName;
